@@ -45,10 +45,11 @@
                     @foreach ($items as $item)
                         <li class="bg-white shadow overflow-hidden px-4 py-4 sm:px-6 sm:rounded-md">
                             <div class="block bg-white h-16 w-full text-gray-700">
-                                {{ $item }}
+                                {{ $item->name }}
                             </div>
                         </li>
                     @endforeach
+                    {{ $items->onEachSide(3)->links() }}
 
                 </ul>
             </div>
